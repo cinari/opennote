@@ -1,0 +1,112 @@
+<RCC>
+    <qresource prefix="/" >
+        <file>example.html</file>
+        <file>images/win/Add Bookmark.png</file>
+        <file>images/win/Add Card.png</file>
+        <file>images/win/Add Folder.png</file>
+        <file>images/win/Add Separator.png</file>
+        <file>images/win/Add Tab.png</file>
+        <file>images/win/Add Window 1.png</file>
+        <file>images/win/Add Window 2.png</file>
+        <file>images/win/Add to Favourites.png</file>
+        <file>images/win/Address Book.png</file>
+        <file>images/win/Advanced Options.png</file>
+        <file>images/win/Anchor.png</file>
+        <file>images/win/Attach.png</file>
+        <file>images/win/Back - Previous.png</file>
+        <file>images/win/Back 2.png</file>
+        <file>images/win/Block Junk Mail.png</file>
+        <file>images/win/Bookmarks 1.png</file>
+        <file>images/win/Bookmarks 2.png</file>
+        <file>images/win/Bookmarks 3.png</file>
+        <file>images/win/Bookmarks 4.png</file>
+        <file>images/win/Browse 1.png</file>
+        <file>images/win/Browse 2.png</file>
+        <file>images/win/Browse 3.png</file>
+        <file>images/win/Calendar Day.png</file>
+        <file>images/win/Calendar Month.png</file>
+        <file>images/win/Calendar Multiweek.png</file>
+        <file>images/win/Calendar Week.png</file>
+        <file>images/win/CharacterGrowFont.png</file>
+        <file>images/win/CharacterShrinkFont.png</file>
+        <file>images/win/Chat 2.png</file>
+        <file>images/win/Chat.png</file>
+        <file>images/win/Contacts.png</file>
+        <file>images/win/Copy.png</file>
+        <file>images/win/Cut.png</file>
+        <file>images/win/Delete.png</file>
+        <file>images/win/Download.png</file>
+        <file>images/win/Email App Icon.png</file>
+        <file>images/win/Email Display.png</file>
+        <file>images/win/Email Envelope.png</file>
+        <file>images/win/Extensions.png</file>
+        <file>images/win/Favourites.png</file>
+        <file>images/win/File.png</file>
+        <file>images/win/Fonts 1.png</file>
+        <file>images/win/Fonts 2.png</file>
+        <file>images/win/Forward - Next.png</file>
+        <file>images/win/Forward 2.png</file>
+        <file>images/win/Forward Email.png</file>
+        <file>images/win/General Options.png</file>
+        <file>images/win/Get Mail.png</file>
+        <file>images/win/Go.png</file>
+        <file>images/win/H. Line.png</file>
+        <file>images/win/Link.png</file>
+        <file>images/win/List.png</file>
+        <file>images/win/ListBullets.png</file>
+        <file>images/win/ListNumbering.png</file>
+        <file>images/win/Move.png</file>
+        <file>images/win/New Doc.png</file>
+        <file>images/win/New Folder.png</file>
+        <file>images/win/New Window.png</file>
+        <file>images/win/ParagraphCenterJustify.png</file>
+        <file>images/win/ParagraphDecreaseIndentation.png</file>
+        <file>images/win/ParagraphFullJustify.png</file>
+        <file>images/win/ParagraphIncreaseIndentation.png</file>
+        <file>images/win/ParagraphLeftJustify.png</file>
+        <file>images/win/ParagraphRightJustify.png</file>
+        <file>images/win/Paste.png</file>
+        <file>images/win/Print.png</file>
+        <file>images/win/Properties.png</file>
+        <file>images/win/Publish.png</file>
+        <file>images/win/Quote 2.png</file>
+        <file>images/win/Quote.png</file>
+        <file>images/win/Refresh.png</file>
+        <file>images/win/Rename - Edit.png</file>
+        <file>images/win/Reply to All.png</file>
+        <file>images/win/Reply.png</file>
+        <file>images/win/Save.png</file>
+        <file>images/win/Search.png</file>
+        <file>images/win/Security.png</file>
+        <file>images/win/Send 2.png</file>
+        <file>images/win/Send Later.png</file>
+        <file>images/win/Send.png</file>
+        <file>images/win/Spell.png</file>
+        <file>images/win/Stop 2.png</file>
+        <file>images/win/Stop.png</file>
+        <file>images/win/Table 1.png</file>
+        <file>images/win/Themes 2.png</file>
+        <file>images/win/Themes.png</file>
+        <file>images/win/View Doc.png</file>
+        <file>images/win/Write.png</file>
+        <file>images/win/editcopy.png</file>
+        <file>images/win/editcut.png</file>
+        <file>images/win/editpaste.png</file>
+        <file>images/win/editredo.png</file>
+        <file>images/win/editundo.png</file>
+        <file>images/win/exportpdf.png</file>
+        <file>images/win/filenew.png</file>
+        <file>images/win/fileopen.png</file>
+        <file>images/win/fileprint.png</file>
+        <file>images/win/filesave.png</file>
+        <file>images/win/textbold.png</file>
+        <file>images/win/textcenter.png</file>
+        <file>images/win/textitalic.png</file>
+        <file>images/win/textjustify.png</file>
+        <file>images/win/textleft.png</file>
+        <file>images/win/textright.png</file>
+        <file>images/win/textunder.png</file>
+        <file>images/win/zoomin.png</file>
+        <file>images/win/zoomout.png</file>
+    </qresource>
+</RCC>

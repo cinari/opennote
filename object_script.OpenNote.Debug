@@ -1,0 +1,12 @@
+INPUT(
+./debug\SwissKnife.o
+./debug\DavinciTextEdit.o
+./debug\TextEditorWindow.o
+./debug\SubversionController.o
+./debug\NotebookExplorer.o
+./debug\main.o
+./debug\moc_DavinciTextEdit.o
+./debug\moc_TextEditorWindow.o
+./debug\moc_NotebookExplorer.o
+./debug\qrc_OpenNote.o
+);
