@@ -48,15 +48,14 @@ int main( int argc, char ** argv )
 {
     Q_INIT_RESOURCE(OpenNote);
 
-    QApplication a( argc, argv );
+    QApplication app( argc, argv );
     TextEditorWindow mw;
-    qWarning("qWarning() executed");
 
     //mw.setWindowFlags(Qt::MSWindowsFixedSizeDialogHint);
     mw.setWindowTitle(ApplicationName);
     mw.statusBar()->showMessage("Editing");
     mw.resize( 800, 600 );
     mw.show();
-    return a.exec();
+    return app.exec();
 }
 

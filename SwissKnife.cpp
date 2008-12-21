@@ -58,6 +58,11 @@ bool SwissKnife::fileSave(QString filePath, QString textToSave)
 	return true;
 }
 
+void SwissKnife::renameFile(QString& baseDirectory,QString& srcFileName,QString& dstFileName)
+{
+	 QDir dir(baseDirectory);
+	 dir.rename(srcFileName,dstFileName);
+}
 
 /*
 static void SwissKnife::showErrorMessage(Qstring errorMessage)

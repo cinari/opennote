@@ -138,8 +138,10 @@ void NotebookList::renameNote()
 	                                         tr("Rename to"), QLineEdit::Normal,
 	                                         "", &ok);
 
-	if(newName.length() == 0) return;
 	QTreeWidgetItem* selectedItem = currentItem();
+
+	if(selectedItem == 0) return;
+	if(newName.length() == 0) return;
 
 	if(selectedItem->parent())
 		relativeDirectory = selectedItem->parent()->text(0) + "/";
@@ -148,12 +150,14 @@ void NotebookList::renameNote()
 		extName="";
 	else extName=".w";
 
-	QString srcFileName = relativeDirectory+selectedItem->text(0) + extName;
-	QString dstFileName = relativeDirectory+newName + extName;
+	QString srcFileName = relativeDirectory + selectedItem->text(0) + extName;
+	QString dstFileName = relativeDirectory + newName + extName;
 	SwissKnife::printString("from: "+ srcFileName);
 	SwissKnife::printString("to: " + dstFileName);
 
-	svnController->doMove(srcFileName,dstFileName);
+	SwissKnife::renameFile(baseDirectory, srcFileName, dstFileName);
+	//
+	// svnController->doMove(srcFileName,dstFileName);
 	selectedItem->setText(0,newName);
 }
 

@@ -7,6 +7,7 @@
 #include<QTextStream>
 #include<QByteArray>
 #include<QFile>
+#include <QDir>
 
 class SwissKnife {
 public:
@@ -18,6 +19,8 @@ public:
 	static void printString(QString str);
 	static QByteArray fileRead(QString filePath);
 	static bool fileSave(QString filePath, QString textToSave);
+
+	static void renameFile(QString& baseDirectory,QString& srcFileName,QString& dstFileName);
 	//static QString fileRead(QString filePath);
 
 	//static void showErrorMessage(Qstring errorMessage);
