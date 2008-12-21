@@ -221,19 +221,17 @@ NotebookList::NotebookList(TextEditorWindow *textEditWindow, QString notebookBas
 void NotebookList::insertFolder(QTreeWidgetItem* selectedItem, NoteElement* folder)
 {
 	QString workingDir = baseDirectory;
-	QTreeWidgetItem *newItem;
-
-	if(selectedItem->whatsThis(0) == "folder") {
-		cout << "Depth of directory is limited to 1"<<endl;
-	}
+	insertNode(0, folder->name, "folder");
 
 	QDir dir(baseDirectory);
+	/*
 	if (dir.exists())
 	{
 		QErrorMessage* errMsgDialog = new QErrorMessage(this);
 		errMsgDialog->showMessage(tr("Already exists!"));
 		return;
 	}
+	*/
 	if (dir.mkdir(folder->name))
 	{
 		cout << "directory creation success"<<endl;
@@ -243,27 +241,30 @@ void NotebookList::insertFolder(QTreeWidgetItem* selectedItem, NoteElement* fold
 	{
 		cout << "directory creatation failed"<<endl;
 	}
-	newItem = new QTreeWidgetItem(this);
-	newItem->setText(0, folder->name);
-	newItem->setWhatsThis(0,"folder");
-	newItem->setIcon(0,folderIcon);
-	newItem->setExpanded(true);
-	newItem->setForeground(0, QBrush(QColor(Qt::black)));
 }
 
 QTreeWidgetItem *NotebookList::insertNode(QTreeWidgetItem *parent, QString name, QString type)
 {
-	QTreeWidgetItem *t;
+	QTreeWidgetItem *newItem;
 
 	if(parent)
-		t=new QTreeWidgetItem(parent);
-	else t=new QTreeWidgetItem(this);
-	t->setText(0, name);
-	t->setWhatsThis(0,type);
-	t->setForeground(0, QBrush(QColor(Qt::black)));
-	t->setIcon(0,(type=="notebook")? bookmarkIcon : folderIcon);
+		newItem = new QTreeWidgetItem(parent);
+	else
+		newItem = new QTreeWidgetItem(this);
 
-	return t;
+	newItem->setText(0, name);
+	newItem->setWhatsThis(0,type);
+	newItem->setForeground(0, QBrush(QColor(Qt::black)));
+
+	if(type == "folder")
+	{
+		newItem->setIcon(0,folderIcon);
+		newItem->setExpanded(true);
+	}
+	else if(type == "notebook")
+		newItem->setIcon(0,bookmarkIcon);
+
+	return newItem;
 }
 
 void NotebookList::insertPage(QTreeWidgetItem* selectedItem, NoteElement* note)
@@ -273,8 +274,6 @@ void NotebookList::insertPage(QTreeWidgetItem* selectedItem, NoteElement* note)
 
 	if(selectedItem)
 	{
-		SwissKnife::printString("selected item = " + selectedItem->whatsThis(0));
-
 		if(selectedItem->whatsThis(0) == "folder")
 		{
 			parentItem = selectedItem;
