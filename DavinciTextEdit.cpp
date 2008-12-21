@@ -68,3 +68,23 @@ bool DavinciTextEdit::canInsertFromMimeData( const QMimeData *source )
     else
         return QTextEdit::canInsertFromMimeData(source);
 }
+
+void DavinciTextEdit::insertHyperLink(QString name, QString& url)
+{
+	insertHtml("<a href=\"" + url + "\">" + name + "</a><p> </p>");
+}
+
+void DavinciTextEdit::insertTextBox()
+{
+	QString t = "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;\" width=\"85%\" cellspacing=\"0\" cellpadding=\"1\" bgcolor=\"#999999\">"  \
+			    "<tr><td>" \
+			    "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;\" align=\"center\" width=\"100%\" cellspacing=\"0\" cellpadding=\"2\" bgcolor=\"#FDD017\">" \
+			    "<tr><td>" \
+			    "<table border=\"0\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;\" width=\"100%\" cellspacing=\"2\" cellpadding=\"2\">" \
+			    "<tr>" \
+			    "<td colspan=\"7\" style=\" vertical-align:top;\">" \
+			    "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial'; font-size:12pt; color:#000000;\">&nbsp;</p>" \
+			    "</td></tr></table></td></tr></table></td></tr></table>";
+
+	insertHtml(t);
+}

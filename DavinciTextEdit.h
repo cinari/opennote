@@ -50,6 +50,8 @@ public:
 	virtual ~DavinciTextEdit();
 	virtual void mouseReleaseEvent (QMouseEvent * e);
 	virtual bool canInsertFromMimeData(const QMimeData *source);
+	void insertHyperLink(QString name, QString& url);
+	void insertTextBox();
 };
 
 #endif /* DAVINCITEXTEDIT_H_ */

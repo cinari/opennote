@@ -303,19 +303,23 @@ void TextEditorWindow::setupTextActions()
     comboSize->setCurrentIndex(comboSize->findText(QString::number(QApplication::font()
                                                                    .pointSize())));
 
-    actionExperiment = new QAction(tr("experiment"), this);
-    connect(actionExperiment, SIGNAL(triggered()), this, SLOT(experiment()));
-    tb->addAction(actionExperiment);
+    actionInsertLink = new QAction(tr("Insert Link"), this);
+    connect(actionInsertLink, SIGNAL(triggered()), this, SLOT(experiment()));
+    tb->addAction(actionInsertLink);
 
-    actionEdit = new QAction(tr("Edit"),this);
-    tb->addAction(actionEdit);
+    actionInsertBox = new QAction(tr("Insert Box"), this);
+    connect(actionInsertBox, SIGNAL(triggered()), this, SLOT(experiment()));
+    tb->addAction(actionInsertBox);
+
+    //actionEdit = new QAction(tr("Edit"),this);
+    //tb->addAction(actionEdit);
 
 }
 
 void TextEditorWindow::experiment()
 {
-	textEdit->insertHtml("<a href=\"http://www.yahoo.com\">hehe2</a><div class=\"chc\">abasd234</div>");
-	textEdit->setStyleSheet(".chc {font-color: red; padding: 10px 40px}");
+	textEdit->insertTextBox();
+	// textEdit->insertHyperLink("test","http://www.yahoo.com");
 }
 
 bool TextEditorWindow::load(const QString &f)
