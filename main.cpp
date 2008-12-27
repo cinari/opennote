@@ -52,6 +52,7 @@ int main( int argc, char ** argv )
     TextEditorWindow mw;
 
     //mw.setWindowFlags(Qt::MSWindowsFixedSizeDialogHint);
+    // test
     mw.setWindowTitle(ApplicationName);
     mw.statusBar()->showMessage("Editing");
     mw.resize( 800, 600 );
